@@ -1,0 +1,38 @@
+[
+  {
+    "confidence_summary": {
+      "coverage_limit": 0.95,
+      "deductible": 0.95,
+      "endorsements": 0.95,
+      "exclusions": 0.95,
+      "policy_type": 0.95,
+      "premium_amount": 0.95
+    },
+    "decision": "auto_approve",
+    "fields_below_threshold": [],
+    "integration_failures": [],
+    "policy_id": "POL-A",
+    "policy_type": "auto",
+    "reason": "all confidence at/above threshold, reviewer agrees, integration clean",
+    "reviewer_disagreements": []
+  },
+  {
+    "confidence_summary": {
+      "coverage_limit": 0.95,
+      "deductible": 0.95,
+      "endorsements": 0.95,
+      "exclusions": 0.95,
+      "policy_type": 0.95,
+      "premium_amount": 0.5
+    },
+    "decision": "human_review",
+    "fields_below_threshold": [
+      "premium_amount"
+    ],
+    "integration_failures": [],
+    "policy_id": "POL-B",
+    "policy_type": "home",
+    "reason": "fields_below_threshold=['premium_amount']",
+    "reviewer_disagreements": []
+  }
+]

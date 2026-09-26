@@ -1,0 +1,7 @@
+# Note: the workspace runs Python 3.13. The installed numpy stubs use Python 3.12+ syntax, which mypy rejects under the
+# project default target (3.11), so mypy is run with --python-version 3.13 to match the interpreter actually used.
+$ .venv/bin/mypy supply_chain_risk/ --python-version 3.13
+Success: no issues found in 8 source files
+
+$ .venv/bin/ruff check supply_chain_risk/ tests/
+All checks passed!

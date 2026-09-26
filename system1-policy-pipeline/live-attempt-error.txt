@@ -1,0 +1,38 @@
+2026-09-26 07:29:42,686 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 400 Bad Request"
+Traceback (most recent call last):
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/bin/policy-extractor", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/policy_extractor/__main__.py", line 82, in main
+    return _cmd_pipeline(args)
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/policy_extractor/__main__.py", line 144, in _cmd_pipeline
+    outcome = extract_with_retry(
+        client=extractor_client, policy_id=pid, document_text=doc, max_retries=3,
+    )
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/policy_extractor/retry.py", line 48, in extract_with_retry
+    response = client.create(
+        model=model,
+    ...<4 lines>...
+        tool_choice={"type": "tool", "name": "extract_policy"},
+    )
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/policy_extractor/client.py", line 27, in create
+    result: Message = self._client.messages.create(**kwargs)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/lib/python3.13/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/lib/python3.13/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<22 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/lib/python3.13/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/lib/python3.13/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'error': {'code': None, 'message': "Model 'claude-haiku-4-5' is not available for your organization. The model may not be configured or enabled. Please contact your administrator.", 'param': None, 'type': 'invalid_request_error'}}

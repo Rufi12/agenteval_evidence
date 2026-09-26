@@ -1,0 +1,39 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.0, pytest-9.1.1, pluggy-1.6.0 -- /workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution/.venv/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /workspace/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/solution
+configfile: pyproject.toml
+plugins: asyncio-1.4.0, anyio-4.15.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 14 items
+
+tests/test_us01_retry.py::test_ac_01_01_extract_tool_has_required_fields PASSED [  7%]
+tests/test_us01_retry.py::test_ac_01_01_policy_type_uses_resilient_catchall_enum PASSED [ 14%]
+tests/test_us01_retry.py::test_ac_01_01_system_prompt_instructs_null_for_unstated_fields PASSED [ 21%]
+tests/test_us01_retry.py::test_ac_01_01_extractor_parses_well_formed_response PASSED [ 28%]
+tests/test_us01_retry.py::test_ac_01_02_validator_flags_negative_premium_as_format PASSED [ 35%]
+tests/test_us01_retry.py::test_ac_01_02_validator_flags_null_required_as_missing_source PASSED [ 42%]
+tests/test_us01_retry.py::test_ac_01_02_validator_flags_consistency_premium_mismatch PASSED [ 50%]
+tests/test_us01_retry.py::test_ac_01_02_validator_accepts_well_formed PASSED [ 57%]
+tests/test_us01_retry.py::test_ac_01_03_format_failure_retries_with_error_appended PASSED [ 64%]
+tests/test_us01_retry.py::test_ac_01_03_consistency_failure_also_retries PASSED [ 71%]
+tests/test_us01_retry.py::test_ac_01_04_missing_source_halts_immediately PASSED [ 78%]
+tests/test_us01_retry.py::test_ac_01_05_success_metadata_after_retry PASSED [ 85%]
+tests/test_us01_retry.py::test_ac_01_06_pattern_summary_counts_across_runs PASSED [ 92%]
+tests/test_us01_retry.py::test_live_extracts_well_formed_policy SKIPPED  [100%]
+
+======================== 13 passed, 1 skipped in 0.37s =========================
+
+===== PERTURBATION EXPERIMENT: blank a required field (recorded responses, max_retries=3) =====
+--- UNPERTURBED (all required fields present)
+result type : PolicyExtraction
+API calls   : 1 (up to 4 were allowed)
+record      : PolicyExtraction(policy_id='POL-2025-009', policy_type='auto', premium_amount=1512.88, deductible=500.0, coverage_limit=300000.0, endorsements=[Endorsement(name='Roadside', limit=None)], exclusions=['Nuclear hazard'], premium_components=None, confidence={'policy_type': 0.95, 'premium_amount': 0.95, 'deductible': 0.95, 'coverage_limit': 0.9, 'endorsements': 0.9, 'exclusions': 0.9}, retry_count=0, final_attempt_index=0, validation_history=[])
+--- PERTURBED (deductible blanked -> null)
+result type : RetryFutileEscalation
+API calls   : 1 (up to 4 were allowed)
+record      : RetryFutileEscalation(policy_id='POL-2025-009', field='deductible', category='missing_source', detected_pattern='deductible_absent', reason="Field 'deductible' returned null — the source document does not contain this information. Retry is futile; escalate to human review.")
+--- COMPARISON (negative premium = format error, retryable)
+result type : RetryFutileEscalation
+API calls   : 4 (up to 4 were allowed)
+record      : RetryFutileEscalation(policy_id='POL-2025-009', field='premium_amount', category='missing_source', detected_pattern='retries_exhausted__negative_premium', reason='Validator rejected the extraction 4 times in a row. Last failure: premium_amount is -1512.88, which is negative. Premium amounts must be a positive number in USD. Re-read the document and extract the correct positive value.')

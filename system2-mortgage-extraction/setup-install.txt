@@ -1,0 +1,105 @@
+Obtaining file:///workspace/Build%20a%20Resilient%20Mortgage%20Document%20Extraction%20System/04-validate-mathematical-consistency/solution
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting anthropic>=0.40 (from mortgage-document-extraction-system==0.2.0)
+  Downloading anthropic-1.8.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pydantic>=2.7 (from mortgage-document-extraction-system==0.2.0)
+  Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting pytest>=8 (from mortgage-document-extraction-system==0.2.0)
+  Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting mypy>=1.10 (from mortgage-document-extraction-system==0.2.0)
+  Downloading mypy-2.3.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting ruff>=0.5 (from mortgage-document-extraction-system==0.2.0)
+  Downloading ruff-0.16.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting anyio<5,>=4.1.0 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting docstring-parser<1,>=0.15 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting httpx2<3,>=2.0.0 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading httpx2-2.13.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting jiter<1,>=0.4.0 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading jiter-0.17.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+Collecting sniffio<2,>=1 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting typing-extensions<5,>=4.14 (from anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting mypy_extensions>=1.0.0 (from mypy>=1.10->mortgage-document-extraction-system==0.2.0)
+  Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=1.0.0 (from mypy>=1.10->mortgage-document-extraction-system==0.2.0)
+  Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting librt>=0.13.0 (from mypy>=1.10->mortgage-document-extraction-system==0.2.0)
+  Downloading librt-0.15.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+Collecting ast-serialize<1.0.0,>=0.6.0 (from mypy>=1.10->mortgage-document-extraction-system==0.2.0)
+  Downloading ast_serialize-0.11.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.7->mortgage-document-extraction-system==0.2.0)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic>=2.7->mortgage-document-extraction-system==0.2.0)
+  Downloading pydantic_core-2.46.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic>=2.7->mortgage-document-extraction-system==0.2.0)
+  Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting iniconfig>=1.0.1 (from pytest>=8->mortgage-document-extraction-system==0.2.0)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=22 (from pytest>=8->mortgage-document-extraction-system==0.2.0)
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest>=8->mortgage-document-extraction-system==0.2.0)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest>=8->mortgage-document-extraction-system==0.2.0)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting idna>=2.8 (from anyio<5,>=4.1.0->anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting httpcore2==2.13.1 (from httpx2<3,>=2.0.0->anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading httpcore2-2.13.1-py3-none-any.whl.metadata (26 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
+Collecting h11>=0.16 (from httpcore2==2.13.1->httpx2<3,>=2.0.0->anthropic>=0.40->mortgage-document-extraction-system==0.2.0)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Downloading anthropic-1.8.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.0 MB/s eta 0:00:00
+Downloading mypy-2.3.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (15.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.2/15.2 MB 28.5 MB/s eta 0:00:00
+Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 38.2 MB/s eta 0:00:00
+Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+Downloading ruff-0.16.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 33.2 MB/s eta 0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Downloading ast_serialize-0.11.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 7.1 MB/s eta 0:00:00
+Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Downloading httpx2-2.13.1-py3-none-any.whl (95 kB)
+Downloading httpcore2-2.13.1-py3-none-any.whl (83 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading jiter-0.17.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (344 kB)
+Downloading librt-0.15.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (531 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 531.7/531.7 kB 14.6 MB/s eta 0:00:00
+Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 6.8 MB/s eta 0:00:00
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading truststore-0.10.4-py3-none-any.whl (18 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Building wheels for collected packages: mortgage-document-extraction-system
+  Building editable for mortgage-document-extraction-system (pyproject.toml): started
+  Building editable for mortgage-document-extraction-system (pyproject.toml): finished with status 'done'
+  Created wheel for mortgage-document-extraction-system: filename=mortgage_document_extraction_system-0.2.0-0.editable-py3-none-any.whl size=3564 sha256=d90784ea56fdd79bc42c6b3ffc6f62f1c1dc26be9e958f14a509cdc7417cbb44
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vrhilszy/wheels/4a/10/0f/8704eddcf1c1477fe87f3cdfeaa4d96bcd7cfd7ebafe191934
+Successfully built mortgage-document-extraction-system
+Installing collected packages: typing-extensions, truststore, sniffio, ruff, pygments, pluggy, pathspec, packaging, mypy_extensions, librt, jiter, iniconfig, idna, h11, docstring-parser, ast-serialize, annotated-types, typing-inspection, pytest, pydantic-core, mypy, httpcore2, anyio, pydantic, httpx2, anthropic, mortgage-document-extraction-system
+Successfully installed annotated-types-0.8.0 anthropic-1.8.0 anyio-4.15.1 ast-serialize-0.11.2 docstring-parser-0.18.0 h11-0.16.0 httpcore2-2.13.1 httpx2-2.13.1 idna-3.20 iniconfig-2.3.0 jiter-0.17.0 librt-0.15.0 mortgage-document-extraction-system-0.2.0 mypy-2.3.1 mypy_extensions-1.1.0 packaging-26.3 pathspec-1.1.1 pluggy-1.6.0 pydantic-2.13.5 pydantic-core-2.46.5 pygments-2.21.0 pytest-9.1.1 ruff-0.16.9 sniffio-1.3.1 truststore-0.10.4 typing-extensions-4.16.0 typing-inspection-0.4.4
+
+[notice] A new release of pip is available: 24.2 -> 26.2.1
+[notice] To update, run: python3.13 -m pip install --upgrade pip

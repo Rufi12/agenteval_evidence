@@ -1,0 +1,11 @@
+
+===== PERTURBATION EXPERIMENT: edit the stated monthly total (replayed extraction, $1 tolerance) =====
+line items: base=5416.67 bonus=1250.0 commission=2140.0 overtime=385.5 other=450.0 -> calculated=9642.17
+--- UNPERTURBED (total as printed in the document): stated=10892.17
+    {"consistent":false,"discrepancies":[{"field":"total_monthly_income","calculated":9642.17,"stated":10892.17,"delta":-1250.0}]}
+--- PERTURBED A (total edited to match the line items): stated=9642.17
+    {"consistent":true,"discrepancies":[]}
+--- PERTURBED B (total off by $0.50, inside tolerance): stated=9642.67
+    {"consistent":true,"discrepancies":[]}
+--- PERTURBED C (total off by $2.00, outside tolerance): stated=9644.17
+    {"consistent":false,"discrepancies":[{"field":"total_monthly_income","calculated":9642.17,"stated":9644.17,"delta":-2.0}]}

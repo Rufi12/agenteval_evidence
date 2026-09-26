@@ -1,0 +1,5 @@
+$ .venv/bin/mypy mortgage_extractor/
+Success: no issues found in 11 source files
+
+$ .venv/bin/ruff check mortgage_extractor/ tests/
+All checks passed!

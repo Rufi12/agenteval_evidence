@@ -1,0 +1,9 @@
+Python version : Python 3.13.0
+OS             : Debian GNU/Linux 12 (bookworm), kernel 6.6.97+ (x86_64)
+Environment    : Udacity course workspace (Linux terminal)
+Date run       : 2026-09-26
+Setup          : One virtual environment per project, created inside each project's final-exercise solution/ folder
+                 with 'python3 -m venv .venv' then '.venv/bin/pip install -e ".[dev]"'.
+                 Test suites, static checks and runs executed offline unless noted.
+System 3 note  : torch was installed from the CPU-only index first (no GPU in the workspace), then '.venv/bin/pip install -e ".[dev]"'.
+                 mypy for System 3 was run with --python-version 3.13 (see system3-supply-chain/static-checks.txt).
